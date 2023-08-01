@@ -1,17 +1,20 @@
-
-from superagi.tools.base_tool import BaseToolkit, BaseTool
-from typing import Type, List
-from .account_tool import AccountTool
-from .positions_tool import PositionsTool
-from .orders_tool import OrdersTool
-from .assets_tool import AssetsTool
+from typing import List
+from superagi.tools.base_tool import BaseToolkit
+from alpaca_get_account_information_tool import AlpacaGetAccountInformationTool
+from alpaca_get_positions_tool import AlpacaGetPositionsTool
+from alpaca_monitor_tool import AlpacaMonitorTool
 
 class AlpacaToolkit(BaseToolkit):
-    name: str = "Alpaca Toolkit"
-    description: str = "Toolkit for interacting with Alpaca API"
+    name = "Alpaca Toolkit"
+    description = "Toolkit for interacting with Alpaca API"
 
-    def get_tools(self) -> List[BaseTool]:
-        return [AccountTool(), PositionsTool(), OrdersTool(), AssetsTool()]
+    def get_tools(self):
+        return [AlpacaGetAccountInformationTool(), AlpacaGetPositionsTool(), AlpacaMonitorTool()]
 
     def get_env_keys(self) -> List[str]:
-        return ["APCA_API_KEY_ID", "APCA_API_SECRET_KEY", "APCA_API_BASE_URL"]
+        return [
+        "APCA_API_KEY_ID",
+        "APCA_API_SECRET_KEY",
+        "APCA_PAPER"
+        ]
+
