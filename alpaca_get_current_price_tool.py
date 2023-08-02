@@ -2,7 +2,7 @@
 from pydantic import Field
 from typing import Type, Any, Optional
 from superagi.tools.base_tool import BaseTool
-from alpaca import TradingClient
+from alpaca import REST as TradingClient
 class AlpacaGetCurrentPriceInput(BaseTool):
     """
     This is the AlpacaGetCurrentPriceInput class.

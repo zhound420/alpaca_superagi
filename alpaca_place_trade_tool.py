@@ -17,7 +17,7 @@ class AlpacaPlaceTradeTool(BaseTool):
 
     def _execute(self, symbol: str, qty: int, side: str):
         """This is the _execute method of the AlpacaPlaceTradeTool class."""
-        api = tradeapi.REST(
+        api = REST(
             self.get_tool_config('APCA_API_KEY_ID'), 
             self.get_tool_config('APCA_API_SECRET_KEY'),
             base_url='https://paper-api.alpaca.markets'
