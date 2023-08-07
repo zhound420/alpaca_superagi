@@ -2,7 +2,7 @@ from pydantic import BaseModel
 
 from typing import Type, Any, Optional
 from superagi.tools.base_tool import BaseTool
-from alpaca import REST as TradingClient
+from alpaca.trading.client import TradingClient
 
 class AlpacaCloseAllTradesTool(BaseTool):
     """
