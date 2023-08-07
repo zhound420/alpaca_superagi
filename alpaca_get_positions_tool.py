@@ -1,7 +1,7 @@
 from typing import Any, Type
 from pydantic import BaseModel, Field
 from superagi.tools.base_tool import BaseTool
-from alpaca import REST as TradingClient
+from alpaca.rest as TradingClient
 
 class AlpacaGetPositionsInput(BaseModel):
     api_key: str = Field(..., description="API Key")
