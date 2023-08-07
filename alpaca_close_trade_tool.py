@@ -2,7 +2,6 @@ from typing import Type, Any
 import os
 from pydantic import BaseModel, Field
 from superagi.tools.base_tool import BaseTool
-from alpaca_trade_api import REST
 
 
 class AlpacaCloseTradeInput(BaseModel):

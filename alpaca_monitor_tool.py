@@ -2,7 +2,6 @@ from typing import Any, Type
 from pydantic import BaseModel, Field
 from superagi.tools.base_tool import BaseTool
 from alpaca  import Stream
-from alpaca_trade_api import REST
 import asyncio
 import logging
 
